@@ -2,7 +2,7 @@ version: 0.2
 
 phases:
   install:
-    commands
+    commands:
     - apt-get update
     - apt-get upgrade -y
     - apt install nodejs npm
@@ -17,4 +17,4 @@ phases:
       - echo Build completed 
 artifacts:
   files:
-    - *
+    -*
