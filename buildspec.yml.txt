@@ -1,6 +1,11 @@
 version: 0.2
 
 phases:
+  install:
+    commands
+    - apt-get update
+    - apt-get upgrade -y
+    - apt install nodejs npm
   pre_build:
     commands:
       - npm install
@@ -9,7 +14,7 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo Build completed on `date`
+      - echo Build completed 
 artifacts:
   files:
     - *
