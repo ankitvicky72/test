@@ -5,7 +5,8 @@ phases:
     commands:
     - apt-get update
     - apt-get upgrade -y
-    - apt-get install npm -y
+    - curl -sL https://deb.nodesource.com/setup_8.x -o nodesource_setup.sh
+    - sudo apt install nodejs
   pre_build:
     commands:
       - npm install
